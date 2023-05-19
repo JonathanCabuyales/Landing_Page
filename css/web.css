@@ -59,7 +59,7 @@ h2{
 }
 
 .menu__container{
-    transform: translateX(-100%);
+    transform: translateX(-110%);
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -73,7 +73,7 @@ h2{
 }
 
 .menu__items{
-    transform: translateX(-100%);
+    transform: translateX(-110%);
     background-color: #fff;
     width: 65%;
     height: 100%;

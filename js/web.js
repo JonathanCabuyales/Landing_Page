@@ -7,6 +7,7 @@ let computed = getComputedStyle(menu__items);
 const img__section1 = document.getElementById('img__section1');
 let imgOriginal = img__section1.getAttribute('src');
 
+console.log(imgOriginal)
 
 const types = {
     left: 'left',
@@ -14,9 +15,9 @@ const types = {
     center_left: 'center_left',
     right_left: 'right-left',
     opacity: 0,
-    transformXpositive: 'translateX(100%)',
+    transformXpositive: 'translateX(110%)',
     transformX0: 'translateX(0%)',
-    transformXNegative: 'translateX(-100%)',
+    transformXNegative: 'translateX(-110%)',
 }
 
 
@@ -28,11 +29,11 @@ window.addEventListener( 'load', function(){
     img__section1.setAttribute('src', imgOriginal);
 }); 
 window.addEventListener( 'resize', function(){
-    if(this.innerWidth > 768){
-        img__section1.setAttribute('src', '../assets/images/image-web-3-desktop.jpg');
+    if(this.innerWidth < 768){
+        img__section1.setAttribute('src', imgOriginal);
         return;
     }
-    img__section1.setAttribute('src', imgOriginal);
+    img__section1.setAttribute('src', '../assets/images/image-web-3-desktop.jpg');
 }); 
 
 
