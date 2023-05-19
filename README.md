@@ -55,7 +55,7 @@ Users should be able to:
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
 To see how you can add code snippets, see below:
-
+Some of BEM
 ```html
 <div class="popular__section__content">
   <figure class="popular__section__img">
@@ -67,6 +67,8 @@ To see how you can add code snippets, see below:
     <p class="popular__section__paragraph">What happens when old PCs are given modern upgrades?</p>
   </div>
 </div>
+
+CSS Grid with areas
 ```
 ```css
 .main{
@@ -80,6 +82,7 @@ To see how you can add code snippets, see below:
     "section3 section3 section3";
 }
 ```
+EventListeners
 ```js
 window.addEventListener( 'resize', function(){
     if(this.innerWidth > 768){
