@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <meta name="description" content="the bright future of web 3.0">
+  <meta name="author" content="Jonathan Cabuyales">
+
+  <title>News homepage</title>
+
+  <link rel="stylesheet" href="./css/web.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="container">
+    <nav class="nav">
+      <figure class="img">
+        <img src="./assets/images/logo.svg" alt="future of web 3.0 Logo" class="img__logo">
+      </figure>
+      <figure class="menu">
+        <img src="./assets/images/icon-menu.svg" id="menu__hamburger" alt="menu" onclick="showMenu()" class="menu__hamburger">
+      </figure>
+      <div class="menu__container" id="menu__container" data-translate="left">
+
+        <div class="menu__items" id="menu__items">
+          <header class="menu__item__header" id="menu__item__header">
+            <img src="./assets/images/icon-menu-close.svg" id="menu__close" onclick="hideMenu()" alt="close menu" class="menu__close">
+          </header>
+          <ul class="nav__list">
+            <li class="nav__link">
+              <h2>Home</h2>
+            </li>
+            <li class="nav__link">
+              <h2>New</h2>
+            </li>
+            <li class="nav__link">
+              <h2>Popular</h2>
+            </li>
+            <li class="nav__link">
+              <h2>Treding</h2>
+            </li>
+            <li class="nav__link">
+              <h2>Categories</h2>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container main">
+    <section class="section">
+      <figure class="section__img__figure section__img__figure--img">
+        <img src="./assets/images/image-web-3-mobile.jpg" alt="web3" id="img__section1" class="section__img">
+      </figure>
+      <h1 class="section__title">The Bright Future of Web 3.0?</h1>
+      <div class="section__text">
+        <p class="section__paragragh">
+          We dive into the next evolution of the web that claims to put the power of the platforms back into the hands
+          of the
+          people.
+          But is it really fulfilling its promise?
+        </p>
+        <button type="button" class="section__btn">Read more</button>
+      </div>
+    </section>
+    <section class="news__section">
+      <div class="container__news">
+        <h2 class="news__section__title">New</h2>
+        <article class="news__section__article">
+          <h2 class="news__section__article__h2">Hydrogen VS Electric Cars</h2>
+          <p class="news__section__article__paragraph">Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </article>
+        <hr class="news__section__divider">
+        <article class="news__section__article">
+          <h2 class="news__section__article__h2">The Downsides of AI Artistry</h2>
+          <p class="news__section__article__paragraph">What are the possible adverse effects of on-demand AI image generation?</p>
+        </article>
+        <hr class="news__section__divider">
+        <article class="news__section__article">
+          <h2 class="news__section__article__h2">Is VC Funding Drying Up?</h2>
+          <p class="news__section__article__paragraph">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="popular__section">
+      <div class="popular__section__content">
+        <figure class="popular__section__img">
+          <img src="./assets/images/image-retro-pcs.jpg" alt="Retro pc" class="section__img--popular">
+        </figure>
+        <div class="popular__section__text">
+          <h2 class="popular__section__number">01</h2>
+          <h3 class="popular__section__title">Reviving Retro PCs</h3>
+          <p class="popular__section__paragraph">What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </div>
+      <div class="popular__section__content">
+        <figure class="popular__section__img">
+          <img src="./assets/images/image-top-laptops.jpg" alt="Retro pc" class="section__img--popular">
+        </figure>
+        <div class="popular__section__text">
+          <h2 class="popular__section__number">02</h2>
+          <h3 class="popular__section__title">Top 10 Laptops of 2022</h3>
+          <p class="popular__section__paragraph">Our best picks for various needs and budgets.</p>
+        </div>
+      </div>
+      <div class="popular__section__content">
+        <figure class="popular__section__img">
+          <img src="./assets/images/image-gaming-growth.jpg" alt="Retro pc" class="section__img--popular">
+        </figure>
+        <div class="popular__section__text">
+          <h2 class="popular__section__number">03</h2>
+          <h3 class="popular__section__title">The Growth of Gaming</h3>
+          <p class="popular__section__paragraph">How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Jonathan Cabuyales</a>.
+    </div>
+  </footer>
+
+  <script src="./js/web.js" defer></script>
+</body>
+
+</html>

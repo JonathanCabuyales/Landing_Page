@@ -1,0 +1,428 @@
+:root {
+
+    /* ### Primary */
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+
+    /* ### Neutral */
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+
+    /* ### Body Copy */
+
+    --Font-size-paragraph: 15px
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container{
+    width: 90%;
+    margin: 25px auto;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* ?menu */
+h2{
+    font-weight: 400;
+}
+.menu__hamburger{
+    width: 52px;
+    cursor: pointer;
+    transition: opacity 1s ease-in-out;
+}
+
+
+.menu__close{
+    width: 40px;
+    cursor: pointer;
+    /* transition: opacity 1s ease-in-out; */
+}
+
+.menu__container{
+    transform: translateX(-100%);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: transform 0.8s ease-in-out;
+}
+
+.menu__items{
+    transform: translateX(-100%);
+    background-color: #fff;
+    width: 65%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 1s ease-in-out;
+}
+
+
+.menu__item__header{
+    width: 85%;
+    margin: 20px auto;
+    text-align: end;
+}
+
+.nav__list{
+    /* border: 1px solid #000; */
+    height: 50%;
+    width: 80%;
+    margin: 50px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.nav__link{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ?menu fin */
+
+/* ? first section main */
+
+.section__img__figure{
+    width: 100%;
+    height: inherit;
+}
+
+.section__img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.section__title{
+    margin: 18px 0;
+    font-size: 2.5em;
+    color: var(--Very-dark-blue);
+    font-weight: 800;
+}
+
+.section__paragragh{
+    color: var(--Dark-grayish-blue);
+    font-size: var(--Font-size-paragraph);
+    line-height: 2em;
+}
+
+.section__btn{
+    background-color: var(--Soft-red);
+    border: 1px solid var(--Soft-red);
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 5px;
+    padding: 15px 35px;
+    margin: 20px 0;
+}
+
+/* ? first section main end */
+
+/* ? second section main start */
+
+.news__section{
+    background-color: var(--Very-dark-blue);
+    height: fit-content;
+}
+.news__section__title{
+    color: var(--Soft-orange);
+}
+.container__news{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px 20px 35px;
+    margin: 30px 20px 35px;
+}
+.news__section__title{
+    margin: 15px 0;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.news__section__article{
+    margin: 20px 0;
+}
+.news__section__article__h2{
+    color: var(--Off-white);
+    font-size: 1.3em;
+    font-weight: 700;
+}
+.news__section__article__paragraph{
+    color: var(--Dark-grayish-blue);
+    margin: 10px 0 0;
+}
+
+.news__section__divider{
+    margin: 18px 0;
+}
+
+/* ? second section main end */
+
+
+/* ? third section main start */
+
+.popular__section{
+    margin: 60px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+}
+.popular__section__content{
+    display: grid;
+    grid-template-columns: 30% 70%;
+
+}
+
+.popular__section__text{
+    padding: 5px 0 5px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9em;
+}
+
+
+
+.popular__section__number{
+    color: var(--Grayish-blue);
+    font-weight: 700;
+    font-size: calc(var(--Font-size-paragraph) * 2.5);
+}
+
+.popular__section__paragraph{
+    color: var(--Dark-grayish-blue);
+    font-size: var(--Font-size-paragraph);
+}
+
+.popular__section__img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.section__img--popular{
+    width: 100%;
+    height: inherit;
+}
+/* ? third section main end */
+
+/* ? footer start */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+/* ? footer end */
+
+/* ?media query start */
+
+@media (min-width: 768px) {
+
+    .container{
+        width: 70%;
+    }
+    .nav{
+        display: flex;
+    }
+
+    .menu__hamburger{
+        display: none;
+    }
+    .menu__container{
+        transform: none;
+        display: flex;
+        flex-direction: row;
+        transition: none;
+        height: 50px;
+        position: relative;
+        /* border: 1px solid #0f0; */
+        border: none;
+    }
+    
+    .menu__item__header{
+        display: none;
+    }
+    .menu__items{
+        transform: translateX(0%);
+        border: none;
+        width: 100%;
+        height: inherit;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        transition: none;
+    }
+    
+    .nav__list{
+        width: 100%;
+        max-width: 1440px;
+        flex-direction: row;
+        margin: 0;
+        justify-content: flex-end;
+        font-size: 11px;
+        gap: 3em;
+    }
+
+    .main{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(fit-content, 1fr);
+        gap: 35px 25px;
+        grid-template-areas:
+        "section1 section1 section2"
+        "section1 section1 section2"
+        "section3 section3 section3";
+    }
+
+
+    .section__img__figure--img{
+        grid-area: sectionImg1;
+        /* background-image: url('../assets/images/image-web-3-desktop.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; */
+    }
+    
+    .news__section{
+        grid-area: section2;
+        
+    }
+
+    .popular__section{
+        grid-area: section3;
+    }
+
+    .news__section__title{
+        margin: 0;
+    }
+
+    .container__news{
+        width: 79%;
+        margin: 21px auto;
+    }
+    .news__section__article__h2{
+        font-size: 1.1em;
+    }
+    .news__section__article__paragraph{
+        font-size: 0.8em;
+    }
+
+    .popular__section{
+        flex-direction: row;
+        /* border: 1px solid #f00; */
+        gap: 1.5em;
+    }
+
+    .popular__section__number{
+        font-size: calc(var(--Font-size-paragraph) * 1.7);
+    }
+
+    .popular__section__title{
+        font-size: 0.8em;
+        width: 100%;
+    }
+
+    .popular__section__content{
+        height: 110px;
+        width: 100%;
+        /* border: 1px solid #f00; */
+    }
+    
+    .popular__section__paragraph{
+        font-size: 0.8em;
+        width: 100%;
+        /* border: 1px solid #f00; */
+        padding: 0;
+    }
+
+    .popular__section__img, .section__img--popular{
+        height: 100%;
+        max-height: 110px;
+    }
+
+    .popular__section__text{
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .section{
+        grid-area: section1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        grid-template-areas: 
+        "img1 img1"
+        "title1 text1"
+        ;
+        row-gap: 40px;
+        /* place-items: center; */
+        /* border: 1px solid #f3f; */
+    }
+    .section__img__figure--img{
+        grid-area: img1;
+    }
+
+    .section__title{
+        grid-area: title1;
+    }
+    .section__text{
+        grid-area: text1;
+        row-gap: 30px;
+        /* place-items: center; */
+        /* border: 1px solid #f00; */
+    }
+    .section__paragragh{
+        line-height: normal;
+    }
+
+    .section__btn{
+        margin: 45px 0;
+    }
+
+    .section__btn:hover{
+        background-color: var(--Very-dark-blue);
+        border: 1px solid var(--Very-dark-blue);
+        cursor: pointer;
+    }
+    .popular__section__title:hover, .nav__link:hover, .news__section__article__h2:hover{
+        color: var(--Soft-orange);
+        cursor: pointer;
+    }
+}
+
+/* ?media query end */
