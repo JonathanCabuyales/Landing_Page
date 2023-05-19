@@ -273,13 +273,15 @@ h2{
         position: relative;
         /* border: 1px solid #0f0; */
         border: none;
+        background-color: #fff;
+        /* color: #000; */
     }
     
     .menu__item__header{
         display: none;
     }
     .menu__items{
-        opacity: 1;
+        /* opacity: 1; */
         transform: translateX(0%);
         border: none;
         width: 100%;
