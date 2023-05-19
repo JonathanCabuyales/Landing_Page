@@ -1,5 +1,6 @@
 // get the element menu hamburger
 const menu__container = document.getElementById('menu__container');
+
 const menu__items = document.getElementById('menu__items');
 const menu__hamburger = document.getElementById('menu__hamburger');
 const menu__item__header = document.getElementById('menu__item__header');
@@ -24,45 +25,33 @@ const types = {
 
 
 window.addEventListener('load', function () {
-    if (this.innerWidth > 768) {
+    if (this.innerWidth > 868) {
         img__section1.setAttribute('src', './assets/images/image-web-3-desktop.jpg');
         menu__items.style.opacity = 1;
-        menu__items.style.opacity = 1;
         menu__container.style.opacity = 1;
-        menu__container.style.color = 'rgb(0, 0, 0);';
-        menu__container.style.transform = types.transformX0;
-        menu__items.style.transform = types.transformX0;
-        menu__container.style.backgroundColor = 'rgb(255, 255, 255);';
-
         return;
     }
     console.log('escucha resize')
     img__section1.setAttribute('src', imgOriginal);
-    menu__items.style.transition = 'none';
-    menu__container.style.transition = 'none';
-    menu__items.style.opacity = 0;
-    menu__container.style.opacity = 0;
     menu__container.style.transform = types.transformXNegative;
     menu__items.style.transform = types.transformXNegative;
-    menu__container.style.backgroundColor = 'background-color: rgba(0, 0, 0, 0.3);';
 
 });
 window.addEventListener('resize', function () {
-    if (this.innerWidth < 768) {
+    if (this.innerWidth < 868) {
         img__section1.setAttribute('src', imgOriginal);
         menu__items.style.transition = 'none';
         menu__container.style.transition = 'none';
-        menu__items.style.opacity = 0;
-        menu__container.style.opacity = 0;
-        menu__container.style.backgroundColor = 'background-color: rgba(0, 0, 0, 0.3);';
         menu__container.style.transform = types.transformXNegative;
         return;
     }
-    console.log('escucha resize')
+    if(this.innerWidth > 868 && this.innerWidth < 968){
+        menu__container.style.transform = types.transformX0;
+        menu__items.style.transform = types.transformX0;
+        return;
+    }
     menu__items.style.opacity = 1;
     menu__container.style.opacity = 1;
-    menu__container.style.color = 'rgb(0, 0, 0);';
-    menu__container.style.backgroundColor = 'rgb(255, 255, 255) !important;';
     menu__container.style.transform = types.transformX0;
     menu__items.style.transform = types.transformX0;
     img__section1.setAttribute('src', './assets/images/image-web-3-desktop.jpg');
@@ -74,8 +63,8 @@ window.addEventListener('resize', function () {
 const showMenu = () => {
     document.body.style.overflow = "hidden";
     menu__items.style.opacity = 1;
-    menu__items.style.transition = transitionOriginalItem;
     menu__container.style.opacity = 1;
+    menu__items.style.transition = transitionOriginalItem;
     menu__container.style.transition = transitionOriginalMenuContainer;
 
     if (menu__container.dataset.translate == types.left) {

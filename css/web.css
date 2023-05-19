@@ -165,7 +165,7 @@ h2{
     flex-direction: column;
     justify-content: space-around;
     padding: 30px 20px 35px;
-    margin: 30px 20px 35px;
+    /* margin: 30px 20px 35px; */
 }
 .news__section__title{
     margin: 15px 0;
@@ -251,10 +251,10 @@ h2{
 
 /* ?media query start */
 
-@media (min-width: 768px) {
+@media (min-width: 868px) {
 
     .container{
-        width: 70%;
+        width: 85%;
     }
     .nav{
         display: flex;
@@ -331,6 +331,7 @@ h2{
 
     .popular__section{
         grid-area: section3;
+        column-gap: 5px;
     }
 
     .news__section__title{
@@ -338,8 +339,9 @@ h2{
     }
 
     .container__news{
-        width: 79%;
-        margin: 21px auto;
+        width: 100%;
+        border: 1px solid #fff;
+        /* margin: 10px 10px; */
     }
     .news__section__article__h2{
         font-size: 1.1em;
@@ -351,7 +353,7 @@ h2{
     .popular__section{
         flex-direction: row;
         /* border: 1px solid #f00; */
-        gap: 1.5em;
+        /* gap: 1.5em; */
     }
 
     .popular__section__number{
@@ -359,18 +361,18 @@ h2{
     }
 
     .popular__section__title{
-        font-size: 0.8em;
+        font-size: 0.9em;
         width: 100%;
     }
 
     .popular__section__content{
-        height: 110px;
+        /* height: 110px; */
         width: 100%;
         /* border: 1px solid #f00; */
     }
     
     .popular__section__paragraph{
-        font-size: 0.8em;
+        font-size: 0.9em;
         width: 100%;
         /* border: 1px solid #f00; */
         padding: 0;
@@ -378,12 +380,13 @@ h2{
 
     .popular__section__img, .section__img--popular{
         height: 100%;
-        max-height: 110px;
+        max-height: inherit;
+        object-fit: cover;
     }
 
     .popular__section__text{
-        gap: 0;
-        justify-content: space-between;
+        gap: 1.2em;
+        justify-content: center;
     }
 
     .section{
@@ -395,7 +398,7 @@ h2{
         "img1 img1"
         "title1 text1"
         ;
-        row-gap: 40px;
+        row-gap: 30px;
         /* place-items: center; */
         /* border: 1px solid #f3f; */
     }
@@ -417,7 +420,8 @@ h2{
     }
 
     .section__btn{
-        margin: 45px 0;
+        margin: 35px 0;
+        font-size: 1em;
     }
 
     .section__btn:hover{
@@ -428,6 +432,20 @@ h2{
     .popular__section__title:hover, .nav__link:hover, .news__section__article__h2:hover{
         color: var(--Soft-orange);
         cursor: pointer;
+    }
+}
+
+@media (min-width: 1100px) {
+    .popular__section__title{
+        font-size: 1.1em;
+        width: 100%;
+    }
+    
+    .popular__section__paragraph{
+        font-size: 1.1em;
+        width: 100%;
+        /* border: 1px solid #f00; */
+        padding: 0;
     }
 }
 
