@@ -6,6 +6,8 @@ const menu__item__header = document.getElementById('menu__item__header');
 let computed = getComputedStyle(menu__items);
 const img__section1 = document.getElementById('img__section1');
 let imgOriginal = img__section1.getAttribute('src');
+let transitionOriginalMenuContainer = menu__container.style.transition;
+let transitionOriginalItem = menu__items.style.transition;
 
 console.log(imgOriginal)
 
@@ -31,8 +33,11 @@ window.addEventListener( 'load', function(){
 window.addEventListener( 'resize', function(){
     if(this.innerWidth < 768){
         img__section1.setAttribute('src', imgOriginal);
+        menu__items.style.transition = 'none';
+        menu__container.style.transition = 'none';
         return;
     }
+    // menu__items.style.opacity = 1;
     img__section1.setAttribute('src', './assets/images/image-web-3-desktop.jpg');
 }); 
 
@@ -41,6 +46,11 @@ window.addEventListener( 'resize', function(){
 
 const showMenu = () => {
     document.body.style.overflow = "hidden";
+    menu__items.style.opacity = 1;
+    menu__items.style.transition = transitionOriginalItem;
+    menu__container.style.opacity = 1;
+    menu__container.style.transition = transitionOriginalMenuContainer;
+
     if (menu__container.dataset.translate == types.left) {
         removePropertyAsign('right', 'left', 'start');
         showHide(0, types.transformX0, types.center_right);
@@ -57,6 +67,8 @@ const showMenu = () => {
 
 const hideMenu = () => {
     document.body.style.overflow = "auto";
+    // menu__items.style.opacity = 0;
+    menu__container.style.opacity = 0;
     if (menu__container.dataset.translate == types.center_right) {
         showHide(1, types.transformXpositive, types.center_left);
         return;
@@ -70,6 +82,7 @@ const hideMenu = () => {
 
 const showHide = (opacity, transform, translateTo) => {
     menu__hamburger.style.opacity = opacity;
+    
     menu__items.style.transform = transform;
     menu__container.style.transform = transform;
     menu__container.dataset.translate = translateTo;
