@@ -23,7 +23,7 @@ const types = {
 
 window.addEventListener( 'load', function(){
     if(this.innerWidth > 768){
-        img__section1.setAttribute('src', '../assets/images/image-web-3-desktop.jpg');
+        img__section1.setAttribute('src', './assets/images/image-web-3-desktop.jpg');
         return;
     }
     img__section1.setAttribute('src', imgOriginal);
@@ -33,7 +33,7 @@ window.addEventListener( 'resize', function(){
         img__section1.setAttribute('src', imgOriginal);
         return;
     }
-    img__section1.setAttribute('src', '../assets/images/image-web-3-desktop.jpg');
+    img__section1.setAttribute('src', './assets/images/image-web-3-desktop.jpg');
 }); 
 
 
