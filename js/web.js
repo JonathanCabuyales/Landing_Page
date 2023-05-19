@@ -26,9 +26,12 @@ const types = {
 window.addEventListener( 'load', function(){
     if(this.innerWidth > 768){
         img__section1.setAttribute('src', './assets/images/image-web-3-desktop.jpg');
+        menu__items.style.opacity = 1;
         return;
     }
     img__section1.setAttribute('src', imgOriginal);
+    menu__items.style.transition = 'none';
+    menu__container.style.transition = 'none';
 }); 
 window.addEventListener( 'resize', function(){
     if(this.innerWidth < 768){
@@ -37,7 +40,7 @@ window.addEventListener( 'resize', function(){
         menu__container.style.transition = 'none';
         return;
     }
-    // menu__items.style.opacity = 1;
+    menu__items.style.opacity = 1;
     img__section1.setAttribute('src', './assets/images/image-web-3-desktop.jpg');
 }); 
 
